@@ -1,0 +1,37 @@
+# 📊 Declaração de Rendimentos 2025
+
+Este repositório contém uma planilha modelo e documentação para organizar dados pessoais, bancários e comprovantes de receita mensal. Ideal para uso em declarações de imposto de renda ou controle financeiro pessoal.
+
+## 📁 Estrutura do Projeto
+---
+## 🧾 Abas da Planilha
+
+### 1. Titular
+Informações pessoais do contribuinte:
+- Nome, CPF, Data de nascimento
+- Título de eleitor, Cônjuge
+- Endereço, Contatos
+- Status de alterações, dependentes e residência no exterior
+
+### 2. Rendimentos
+Informações bancárias:
+- Banco, Código, Valor Atual, Anexo PDF
+- Soma automática dos valores
+
+### 3. Notas
+Entradas mensais de receita:
+- Data (formato serial do Excel)
+- Categoria (ex: Holerite)
+- Valor
+
+### 4. Bancos
+Lista de códigos oficiais dos bancos brasileiros.
+
+## 🧮 Fórmulas Utilizadas
+
+### Soma total dos valores bancários
+```excel
+=SOMA(C2:C100)
+=DATA(1900;1;1)+A2-1
+=SE(B2="SIM";"Atualização necessária";"Sem alterações")
+=SE(E(TEXTO(A2;"000\.000\.000\-00")=A2;NÚM.CARACT(A2)=14);"CPF válido";"Formato inválido")
