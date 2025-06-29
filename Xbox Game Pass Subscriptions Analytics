@@ -1,0 +1,49 @@
+# 🎮 Xbox Game Pass Subscriptions Analytics
+
+Este repositório contém uma planilha de análise de vendas de assinaturas do Xbox Game Pass, incluindo dados de clientes, tipos de planos, valores de assinatura, passes adicionais (EA Play e Minecraft), cupons e valores totais. Também estão incluídas análises de negócio e um dashboard visual.
+
+## 📊 Estrutura da Planilha
+
+### 1. Aba: Assets
+Contém a paleta de cores utilizada no dashboard:
+- #9BC848 – Xbox Color
+- #22C55E – Xbox Color
+- #2AE6B1 – Menus
+- #5BF6A8 – Menus
+- #E8E6E9 – Negative Zone
+
+### 2. Aba: Bases
+Contém os dados principais de assinantes:
+
+| Campo                  | Descrição                                      |
+|------------------------|-----------------------------------------------|
+| Subs…
+
+Perguntas de Negócio Respondidas
+1. Qual o faturamento total de vendas de planos anuais?
+Fórmula: Soma de Total Value onde Subscription Type = "Annual"
+
+2. Qual o faturamento total de planos anuais, separado por auto renovação?
+Fórmula: Tabela dinâmica com Subscription Type = "Annual" e segmentação por Auto Renewal
+
+3. Total de vendas de assinaturas do EA Play
+Fórmula: Soma de EA Play Season Pass Price agrupado por Plan
+
+4. Total de vendas de assinaturas do Minecraft Season Pass
+Fórmula: Soma de Minecraft Season Pass Price agrupado por Plan
+[21:03, 28/06/2025] Jennifer Silva: 📊 Dashboard
+A aba Dashboard apresenta visualizações com:
+
+Faturamento total por tipo de plano
+
+Participação de passes adicionais
+
+Comparativo entre planos com e sem renovação automática
+
+Gráficos de barras e pizza com base nas análises
+[21:03, 28/06/2025] Jennifer Silva: xbox-gamepass-analytics/
+├── xbox_gamepass_data.xlsx
+├── README.md
+├── formulas.md
+└── assets/
+    └── paleta_cores.png
